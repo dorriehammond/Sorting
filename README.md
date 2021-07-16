@@ -2,8 +2,8 @@
 Notes on various sorting algorithms
 
 ## Complexity Analysis
-| Algorithm | Time Complexity | | | Space Complexity |
-| | Best | Average | Worst | Worst |
+
+| Algorithm | Best Time | Average Time | Worst Time | Worst Space |
 | -- | -- | -- | -- | -- |
 | Quicksort | nlog(n) | nlog(n) | n^2 | log(n) |
 | Bubble Sort | n | n^2 | n^2 | 1 |
