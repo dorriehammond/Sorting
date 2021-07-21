@@ -15,5 +15,5 @@ Notes on various sorting algorithms
 | Shell Sort | nlog(n) | n(log(n))^2 | n(log(n))^2 | 1 |
 | Bucket Sort | n+k | n+k | n^2 | n |
 | Radix Sort | nk | nk | nk | n+k |
-
+| Counting Sort | n+k | n+k | n+k | k |
 
