@@ -16,5 +16,4 @@ Notes on various sorting algorithms
 | Bucket Sort | n+k | n+k | n^2 | n |
 | Radix Sort | nk | nk | nk | n+k |
 
-## Quicksort
 
