@@ -173,14 +173,49 @@ public class Sorting {
   RADIX SORT
   */ 
   public static void radixSort(long[] array) {
-    
+    int n = array.length;
+    int sig = String.valueOf(maxElement(a)).length();
+    int k = 9;
+    int[] count = new int[k+1];
+    long[] b = new long[n];
+    for (int i = 0; i < sig; i++) {
+      count[i] = 0;
+    }
+    double place = Math.pow(10,i);
+    for (int j = 0; j <= n-1; j++) {
+      int aj = (int) (array[j]/(place)) % 10;
+      count[aj] = count[aj] + 1;
+    }
+    for (int i = 1; i <= k; i++) {
+      count[i] = count[i] + count[i-1];
+    }
+    for (int j = n-1; j >= 0; j--) {
+      int aj = (int) (a[j]/place) % 10;
+      b[count[aj]-1] = array[j];
+      count[aj] = count[aj] - 1;
+    }
+    System.arraycopy(b, 0, array, 0, n);
   }
   
   /*
   COUNTING SORT
   */ 
   public static void radixSort(long[] array) {
-    
+    int k = maxElement(array);
+    int n = array.length
+    int[] count = new int[k+1];
+    long[] b = new long[n];
+    for (int j = 0; j <= n-1; j++) {
+      count[ ((int) array[j]) ] = count[ ((int) array[j]) ] + 1;
+    }
+    for (int i = 1; i <= k; i++) {
+      count[i] = count[i] + count[i-1];
+    }
+    for (int j = n-1; j >= 0; j--) {
+      b[ count[ ((int) array[j]) ] - 1 ] = array[j];
+      count[ ((int) array[j]) ] = count[ ((int) array[j]) ] - 1;
+    }
+    System.arraycopy(b, 0, array, 0, n);
   }
   
   /*
